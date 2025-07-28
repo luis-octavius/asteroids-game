@@ -44,10 +44,10 @@ def main():
         for asteroid in asteroids:
             if asteroid.get_collision(player):
                 print("Game Over!")
-                pygame.QUIT
+                pygame.QUIT()
             for shot in shotables:
                 if asteroid.get_collision(shot):
-                    asteroid.kill()
+                    asteroid.split()
                     shot.kill()
         
         
